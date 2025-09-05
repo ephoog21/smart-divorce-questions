@@ -51,113 +51,113 @@ export default function WhatToAskYourDivorceLawyer() {
   return (
     <>
       <JsonLd data={faqData} />
-      <div className="bg-white">
+      <div className="bg-cream-50 min-h-screen">
         <div className="container mx-auto px-4 py-16">
           <div className="max-w-4xl mx-auto">
-            <h1 className="text-4xl font-bold text-gray-900 mb-6">
+            <h1 className="font-serif text-4xl lg:text-5xl font-bold text-navy-900 mb-6">
               What to Ask Your Divorce Lawyer
             </h1>
             
             <div className="prose prose-lg max-w-none">
-              <p className="text-xl text-gray-700 mb-12 leading-relaxed">
+              <p className="text-xl text-navy-700 mb-12 leading-relaxed">
                 Meeting with a divorce lawyer can be overwhelming. Asking the right questions helps you understand your options and plan for the future. Here are essential topics to cover in your first consultation.
               </p>
 
               <section className="mb-12">
-                <h2 className="text-3xl font-semibold text-gray-900 mb-6">Custody and Parenting Time</h2>
-                <div className="bg-blue-50 p-6 rounded-lg mb-6">
+                <h2 className="font-serif text-3xl font-semibold text-navy-900 mb-6">Custody and Parenting Time</h2>
+                <div className="bg-white border-l-4 border-teal-500 p-6 rounded-lg shadow-sm mb-6">
                   <ul className="space-y-4">
                     <li className="flex items-start">
-                      <span className="text-blue-600 font-semibold mr-2">Q:</span>
-                      <span>"What custody schedules are realistic in my state?"</span>
+                      <span className="text-teal-600 font-semibold mr-2">Q:</span>
+                      <span className="text-slate-700">"What custody schedules are realistic in my state?"</span>
                     </li>
                     <li className="flex items-start">
-                      <span className="text-blue-600 font-semibold mr-2">Q:</span>
-                      <span>"How does joint custody usually work for children under 5? For teenagers?"</span>
+                      <span className="text-teal-600 font-semibold mr-2">Q:</span>
+                      <span className="text-slate-700">"How does joint custody usually work for children under 5? For teenagers?"</span>
                     </li>
                     <li className="flex items-start">
-                      <span className="text-blue-600 font-semibold mr-2">Q:</span>
-                      <span>"How are holidays typically divided?"</span>
+                      <span className="text-teal-600 font-semibold mr-2">Q:</span>
+                      <span className="text-slate-700">"How are holidays typically divided?"</span>
                     </li>
                   </ul>
                 </div>
-                <p className="text-gray-700">
+                <p className="text-slate-700 leading-relaxed">
                   Understanding custody arrangements early helps you prepare for negotiations and set realistic expectations for your parenting schedule.
                 </p>
               </section>
 
               <section className="mb-12">
-                <h2 className="text-3xl font-semibold text-gray-900 mb-6">Finances</h2>
-                <div className="bg-green-50 p-6 rounded-lg mb-6">
+                <h2 className="font-serif text-3xl font-semibold text-navy-900 mb-6">Finances</h2>
+                <div className="bg-white border-l-4 border-teal-500 p-6 rounded-lg shadow-sm mb-6">
                   <ul className="space-y-4">
                     <li className="flex items-start">
-                      <span className="text-green-600 font-semibold mr-2">Q:</span>
-                      <span>"How is spousal support calculated here?"</span>
+                      <span className="text-teal-600 font-semibold mr-2">Q:</span>
+                      <span className="text-slate-700">"How is spousal support calculated here?"</span>
                     </li>
                     <li className="flex items-start">
-                      <span className="text-green-600 font-semibold mr-2">Q:</span>
-                      <span>"What happens with joint debt and credit cards?"</span>
+                      <span className="text-teal-600 font-semibold mr-2">Q:</span>
+                      <span className="text-slate-700">"What happens with joint debt and credit cards?"</span>
                     </li>
                     <li className="flex items-start">
-                      <span className="text-green-600 font-semibold mr-2">Q:</span>
-                      <span>"How will retirement accounts be handled?"</span>
+                      <span className="text-teal-600 font-semibold mr-2">Q:</span>
+                      <span className="text-slate-700">"How will retirement accounts be handled?"</span>
                     </li>
                   </ul>
                 </div>
-                <p className="text-gray-700">
+                <p className="text-slate-700 leading-relaxed">
                   Financial questions are crucial because they affect your long-term security and ability to support yourself and your children.
                 </p>
               </section>
 
               <section className="mb-12">
-                <h2 className="text-3xl font-semibold text-gray-900 mb-6">Property Division</h2>
-                <div className="bg-purple-50 p-6 rounded-lg mb-6">
+                <h2 className="font-serif text-3xl font-semibold text-navy-900 mb-6">Property Division</h2>
+                <div className="bg-white border-l-4 border-teal-500 p-6 rounded-lg shadow-sm mb-6">
                   <ul className="space-y-4">
                     <li className="flex items-start">
-                      <span className="text-purple-600 font-semibold mr-2">Q:</span>
-                      <span>"Is my state a community property or equitable distribution state?"</span>
+                      <span className="text-teal-600 font-semibold mr-2">Q:</span>
+                      <span className="text-slate-700">"Is my state a community property or equitable distribution state?"</span>
                     </li>
                     <li className="flex items-start">
-                      <span className="text-purple-600 font-semibold mr-2">Q:</span>
-                      <span>"How will the house and mortgage be divided?"</span>
+                      <span className="text-teal-600 font-semibold mr-2">Q:</span>
+                      <span className="text-slate-700">"How will the house and mortgage be divided?"</span>
                     </li>
                     <li className="flex items-start">
-                      <span className="text-purple-600 font-semibold mr-2">Q:</span>
-                      <span>"What happens to business assets?"</span>
+                      <span className="text-teal-600 font-semibold mr-2">Q:</span>
+                      <span className="text-slate-700">"What happens to business assets?"</span>
                     </li>
                   </ul>
                 </div>
-                <p className="text-gray-700">
+                <p className="text-slate-700 leading-relaxed">
                   Property division rules vary significantly by state, so understanding your state's approach is essential for planning.
                 </p>
               </section>
 
               <section className="mb-12">
-                <h2 className="text-3xl font-semibold text-gray-900 mb-6">Process and Timeline</h2>
-                <div className="bg-orange-50 p-6 rounded-lg mb-6">
+                <h2 className="font-serif text-3xl font-semibold text-navy-900 mb-6">Process and Timeline</h2>
+                <div className="bg-white border-l-4 border-teal-500 p-6 rounded-lg shadow-sm mb-6">
                   <ul className="space-y-4">
                     <li className="flex items-start">
-                      <span className="text-orange-600 font-semibold mr-2">Q:</span>
-                      <span>"How long will my divorce likely take?"</span>
+                      <span className="text-teal-600 font-semibold mr-2">Q:</span>
+                      <span className="text-slate-700">"How long will my divorce likely take?"</span>
                     </li>
                     <li className="flex items-start">
-                      <span className="text-orange-600 font-semibold mr-2">Q:</span>
-                      <span>"What documents should I bring to the first hearing?"</span>
+                      <span className="text-teal-600 font-semibold mr-2">Q:</span>
+                      <span className="text-slate-700">"What documents should I bring to the first hearing?"</span>
                     </li>
                     <li className="flex items-start">
-                      <span className="text-orange-600 font-semibold mr-2">Q:</span>
-                      <span>"What happens if my spouse and I can't agree?"</span>
+                      <span className="text-teal-600 font-semibold mr-2">Q:</span>
+                      <span className="text-slate-700">"What happens if my spouse and I can't agree?"</span>
                     </li>
                   </ul>
                 </div>
-                <p className="text-gray-700">
+                <p className="text-slate-700 leading-relaxed">
                   Understanding the timeline and process helps you prepare mentally and financially for what lies ahead.
                 </p>
               </section>
 
-              <div className="bg-gray-100 p-8 rounded-lg mt-12">
-                <h3 className="text-2xl font-semibold text-gray-900 mb-4">Before Your Consultation</h3>
-                <ul className="list-disc list-inside space-y-2 text-gray-700">
+              <div className="bg-teal-50 border border-teal-200 p-8 rounded-lg mt-12">
+                <h3 className="font-serif text-2xl font-semibold text-teal-900 mb-4">Before Your Consultation</h3>
+                <ul className="list-disc list-inside space-y-3 text-teal-800">
                   <li>Gather financial documents (tax returns, bank statements, pay stubs)</li>
                   <li>Make a list of all assets and debts</li>
                   <li>Write down your main concerns and priorities</li>

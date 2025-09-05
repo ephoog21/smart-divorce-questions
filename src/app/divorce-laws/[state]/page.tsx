@@ -83,25 +83,25 @@ export default async function StatePage({ params }: StatePageProps) {
   return (
     <>
       <JsonLd data={structuredData} />
-      <div className="bg-white">
+      <div className="bg-cream-50 min-h-screen">
         <div className="container mx-auto px-4 py-16">
           <div className="max-w-4xl mx-auto">
-            <h1 className="text-4xl font-bold text-gray-900 mb-6">
+            <h1 className="font-serif text-4xl lg:text-5xl font-bold text-navy-900 mb-6">
               Divorce Laws in {stateName}
             </h1>
             
             <div className="prose prose-lg max-w-none">
-              <p className="text-xl text-gray-700 mb-12 leading-relaxed">
+              <p className="text-xl text-navy-700 mb-12 leading-relaxed">
                 Understanding {stateName}'s specific divorce laws, court procedures, and requirements can help you navigate the process more effectively. Here's what you need to know about getting divorced in {stateName}.
               </p>
 
               <section className="mb-12">
-                <h2 className="text-3xl font-semibold text-gray-900 mb-6">Key Requirements</h2>
+                <h2 className="font-serif text-3xl font-semibold text-navy-900 mb-6">Key Requirements</h2>
                 
                 <div className="grid md:grid-cols-2 gap-6 mb-8">
-                  <div className="bg-blue-50 p-6 rounded-lg">
-                    <h3 className="text-xl font-semibold text-blue-900 mb-4">Basic Requirements</h3>
-                    <div className="space-y-3 text-blue-800">
+                  <div className="bg-white border border-stone-200 p-6 rounded-lg shadow-sm">
+                    <h3 className="text-xl font-semibold text-navy-900 mb-4">Basic Requirements</h3>
+                    <div className="space-y-3 text-slate-700">
                       <div>
                         <span className="font-semibold">Residency Requirement:</span>
                         <br />
@@ -120,9 +120,9 @@ export default async function StatePage({ params }: StatePageProps) {
                     </div>
                   </div>
                   
-                  <div className="bg-green-50 p-6 rounded-lg">
-                    <h3 className="text-xl font-semibold text-green-900 mb-4">Cost & Timeline</h3>
-                    <div className="space-y-3 text-green-800">
+                  <div className="bg-white border border-stone-200 p-6 rounded-lg shadow-sm">
+                    <h3 className="text-xl font-semibold text-navy-900 mb-4">Cost & Timeline</h3>
+                    <div className="space-y-3 text-slate-700">
                       <div>
                         <span className="font-semibold">Average Cost:</span>
                         <br />
@@ -144,23 +144,23 @@ export default async function StatePage({ params }: StatePageProps) {
               </section>
 
               <section className="mb-12">
-                <h2 className="text-3xl font-semibold text-gray-900 mb-6">Court System</h2>
+                <h2 className="font-serif text-3xl font-semibold text-navy-900 mb-6">Court System</h2>
                 
-                <div className="bg-gray-50 p-6 rounded-lg mb-6">
-                  <h3 className="text-xl font-semibold text-gray-900 mb-3">Which Courts Handle Divorce</h3>
-                  <p className="text-gray-700 mb-4">
+                <div className="bg-teal-50 border border-teal-200 p-6 rounded-lg mb-6">
+                  <h3 className="text-xl font-semibold text-teal-900 mb-3">Which Courts Handle Divorce</h3>
+                  <p className="text-slate-700 mb-4">
                     {info.specificInfo.courts}
                   </p>
                 </div>
               </section>
 
               <section className="mb-12">
-                <h2 className="text-3xl font-semibold text-gray-900 mb-6">Property Division</h2>
+                <h2 className="font-serif text-3xl font-semibold text-navy-900 mb-6">Property Division</h2>
                 
-                <div className="bg-yellow-50 p-6 rounded-lg">
-                  <h3 className="text-xl font-semibold text-yellow-900 mb-4">{info.propertyDivision}</h3>
+                <div className="bg-white border border-stone-200 p-6 rounded-lg shadow-sm">
+                  <h3 className="text-xl font-semibold text-navy-900 mb-4">{info.propertyDivision}</h3>
                   {info.propertyDivision === 'Community Property' ? (
-                    <div className="text-yellow-800">
+                    <div className="text-slate-700">
                       <p className="mb-3">
                         {stateName} is a community property state, which means:
                       </p>
@@ -172,7 +172,7 @@ export default async function StatePage({ params }: StatePageProps) {
                       </ul>
                     </div>
                   ) : info.propertyDivision === 'Equitable Distribution' ? (
-                    <div className="text-yellow-800">
+                    <div className="text-slate-700">
                       <p className="mb-3">
                         {stateName} follows equitable distribution, which means:
                       </p>
@@ -184,7 +184,7 @@ export default async function StatePage({ params }: StatePageProps) {
                       </ul>
                     </div>
                   ) : (
-                    <div className="text-yellow-800">
+                    <div className="text-slate-700">
                       <p>
                         Property division laws vary. Consult with a local family law attorney to understand how assets and debts are divided in {stateName}.
                       </p>
@@ -194,14 +194,14 @@ export default async function StatePage({ params }: StatePageProps) {
               </section>
 
               <section className="mb-12">
-                <h2 className="text-3xl font-semibent text-gray-900 mb-6">Child Custody</h2>
+                <h2 className="font-serif text-3xl font-semibold text-navy-900 mb-6">Child Custody</h2>
                 
-                <div className="bg-purple-50 p-6 rounded-lg">
-                  <h3 className="text-xl font-semibent text-purple-900 mb-4">Custody Standards</h3>
-                  <p className="text-purple-800 mb-4">
+                <div className="bg-white border border-stone-200 p-6 rounded-lg shadow-sm">
+                  <h3 className="text-xl font-semibold text-navy-900 mb-4">Custody Standards</h3>
+                  <p className="text-slate-700 mb-4">
                     {info.specificInfo.custody}
                   </p>
-                  <div className="text-purple-700">
+                  <div className="text-slate-600">
                     <p className="mb-2">Common factors courts consider:</p>
                     <ul className="space-y-1">
                       <li>• Child's physical, emotional, and developmental needs</li>
@@ -216,19 +216,19 @@ export default async function StatePage({ params }: StatePageProps) {
               </section>
 
               <section className="mb-12">
-                <h2 className="text-3xl font-semibold text-gray-900 mb-6">Important {stateName} Information</h2>
+                <h2 className="font-serif text-3xl font-semibold text-navy-900 mb-6">Important {stateName} Information</h2>
                 
-                <div className="bg-red-50 p-6 rounded-lg">
-                  <h3 className="text-xl font-semibold text-red-900 mb-4">State-Specific Details</h3>
-                  <p className="text-red-800">
+                <div className="bg-teal-50 border border-teal-200 p-6 rounded-lg">
+                  <h3 className="text-xl font-semibold text-teal-900 mb-4">State-Specific Details</h3>
+                  <p className="text-slate-700">
                     {info.specificInfo.uniqueLaws}
                   </p>
                 </div>
               </section>
 
-              <div className="bg-gray-100 p-8 rounded-lg mt-12">
-                <h3 className="text-2xl font-semibold text-gray-900 mb-4">Next Steps</h3>
-                <ul className="list-disc list-inside space-y-2 text-gray-700">
+              <div className="bg-white border border-stone-200 p-8 rounded-lg shadow-sm mt-12">
+                <h3 className="font-serif text-2xl font-semibold text-navy-900 mb-4">Next Steps</h3>
+                <ul className="list-disc list-inside space-y-2 text-slate-700">
                   <li>Consult with a family law attorney licensed in {stateName}</li>
                   <li>Gather all necessary financial documents</li>
                   <li>Understand your county's specific court procedures</li>
@@ -237,8 +237,8 @@ export default async function StatePage({ params }: StatePageProps) {
                   <li>Plan for the emotional and financial aspects of divorce</li>
                 </ul>
                 
-                <div className="mt-6 p-4 bg-yellow-100 rounded-lg">
-                  <p className="text-sm text-yellow-800">
+                <div className="mt-6 p-4 bg-teal-50 border border-teal-200 rounded-lg">
+                  <p className="text-sm text-teal-800">
                     <strong>Disclaimer:</strong> This information is general in nature and should not be considered legal advice. Divorce laws change frequently, and each situation is unique. Always consult with a qualified attorney licensed in {stateName} for advice specific to your circumstances.
                   </p>
                 </div>

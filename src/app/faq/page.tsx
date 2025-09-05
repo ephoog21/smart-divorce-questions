@@ -1,5 +1,6 @@
 import { Metadata } from 'next'
 import JsonLd from '@/components/JsonLd'
+import FAQAccordion from '@/components/FAQAccordion'
 import { createMetadata } from '@/lib/metadata'
 
 export const metadata: Metadata = createMetadata({
@@ -147,59 +148,38 @@ export default function FAQ() {
   return (
     <>
       <JsonLd data={faqData} />
-      <div className="bg-white">
+      <div className="bg-cream-50 min-h-screen">
         <div className="container mx-auto px-4 py-16">
           <div className="max-w-4xl mx-auto">
-            <h1 className="text-4xl font-bold text-gray-900 mb-6">
+            <h1 className="font-serif text-4xl lg:text-5xl font-bold text-navy-900 mb-6">
               Divorce FAQ
             </h1>
             
-            <p className="text-xl text-gray-700 mb-12 leading-relaxed">
+            <p className="text-xl text-navy-700 mb-12 leading-relaxed">
               Get answers to the most common questions about divorce, from the legal process to custody and finances.
             </p>
 
-            <div className="space-y-12">
-              {faqs.map((category, categoryIndex) => (
-                <section key={categoryIndex} className="">
-                  <h2 className="text-3xl font-semibold text-gray-900 mb-8 border-b border-gray-200 pb-2">
-                    {category.category}
-                  </h2>
-                  
-                  <div className="space-y-6">
-                    {category.questions.map((faq, faqIndex) => (
-                      <div key={faqIndex} className="bg-gray-50 rounded-lg p-6">
-                        <h3 className="text-xl font-semibold text-gray-900 mb-3">
-                          {faq.q}
-                        </h3>
-                        <p className="text-gray-700 leading-relaxed">
-                          {faq.a}
-                        </p>
-                      </div>
-                    ))}
-                  </div>
-                </section>
-              ))}
-            </div>
+            <FAQAccordion categories={faqs} />
 
-            <div className="mt-16 bg-blue-50 p-8 rounded-lg">
-              <h2 className="text-2xl font-semibold text-blue-900 mb-4">
+            <div className="mt-16 bg-teal-50 border border-teal-200 p-8 rounded-lg">
+              <h2 className="font-serif text-2xl font-semibold text-teal-900 mb-4">
                 Need More Specific Advice?
               </h2>
-              <p className="text-blue-800 mb-6">
+              <p className="text-teal-800 mb-6">
                 Every divorce is different. While this FAQ covers common questions, your situation may have unique factors that require personalized legal advice.
               </p>
               <div className="space-y-4">
                 <div className="flex items-start">
-                  <span className="text-blue-600 font-semibold mr-2">•</span>
-                  <span className="text-blue-700">Consult with a family law attorney in your state</span>
+                  <span className="text-teal-600 font-semibold mr-2">•</span>
+                  <span className="text-teal-700">Consult with a family law attorney in your state</span>
                 </div>
                 <div className="flex items-start">
-                  <span className="text-blue-600 font-semibold mr-2">•</span>
-                  <span className="text-blue-700">Consider mediation for collaborative solutions</span>
+                  <span className="text-teal-600 font-semibold mr-2">•</span>
+                  <span className="text-teal-700">Consider mediation for collaborative solutions</span>
                 </div>
                 <div className="flex items-start">
-                  <span className="text-blue-600 font-semibold mr-2">•</span>
-                  <span className="text-blue-700">Keep detailed records of all important documents</span>
+                  <span className="text-teal-600 font-semibold mr-2">•</span>
+                  <span className="text-teal-700">Keep detailed records of all important documents</span>
                 </div>
               </div>
             </div>

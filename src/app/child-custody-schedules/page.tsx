@@ -43,29 +43,29 @@ export default function ChildCustodySchedules() {
   return (
     <>
       <JsonLd data={faqData} />
-      <div className="bg-white">
+      <div className="bg-cream-50 min-h-screen">
         <div className="container mx-auto px-4 py-16">
           <div className="max-w-4xl mx-auto">
-            <h1 className="text-4xl font-bold text-gray-900 mb-6">
+            <h1 className="font-serif text-4xl lg:text-5xl font-bold text-navy-900 mb-6">
               Child Custody Schedules Explained
             </h1>
             
             <div className="prose prose-lg max-w-none">
-              <p className="text-xl text-gray-700 mb-12 leading-relaxed">
+              <p className="text-xl text-navy-700 mb-12 leading-relaxed">
                 One of the hardest parts of divorce is creating a custody schedule that works for parents and children. These are the most common custody arrangements:
               </p>
 
               <section className="mb-12">
-                <h2 className="text-3xl font-semibold text-gray-900 mb-6">Popular Custody Schedules</h2>
+                <h2 className="font-serif text-3xl font-semibold text-navy-900 mb-6">Popular Custody Schedules</h2>
                 
                 <div className="space-y-8">
-                  <div className="border border-gray-200 rounded-lg p-6">
+                  <div className="bg-white border border-stone-200 rounded-lg p-6 shadow-sm">
                     <h3 className="text-2xl font-semibold text-blue-600 mb-4">2-2-3 Schedule</h3>
-                    <p className="text-gray-700 mb-4">
+                    <p className="text-slate-700 mb-4">
                       <strong>How it works:</strong> Alternating every 2 days, then 3 days with the other parent.
                     </p>
                     
-                    <div className="bg-blue-50 p-4 rounded-lg mb-4">
+                    <div className="bg-teal-50 border border-teal-200 p-4 rounded-lg mb-4">
                       <h4 className="font-semibold mb-2">Example Week:</h4>
                       <div className="grid grid-cols-7 gap-1 text-sm">
                         <div className="text-center font-semibold">Mon</div>
@@ -75,13 +75,13 @@ export default function ChildCustodySchedules() {
                         <div className="text-center font-semibold">Fri</div>
                         <div className="text-center font-semibold">Sat</div>
                         <div className="text-center font-semibold">Sun</div>
-                        <div className="text-center bg-blue-200 p-2 rounded">Parent A</div>
-                        <div className="text-center bg-blue-200 p-2 rounded">Parent A</div>
-                        <div className="text-center bg-green-200 p-2 rounded">Parent B</div>
-                        <div className="text-center bg-green-200 p-2 rounded">Parent B</div>
-                        <div className="text-center bg-blue-200 p-2 rounded">Parent A</div>
-                        <div className="text-center bg-blue-200 p-2 rounded">Parent A</div>
-                        <div className="text-center bg-blue-200 p-2 rounded">Parent A</div>
+                        <div className="text-center bg-teal-200 p-2 rounded">Parent A</div>
+                        <div className="text-center bg-teal-200 p-2 rounded">Parent A</div>
+                        <div className="text-center bg-navy-200 p-2 rounded">Parent B</div>
+                        <div className="text-center bg-navy-200 p-2 rounded">Parent B</div>
+                        <div className="text-center bg-teal-200 p-2 rounded">Parent A</div>
+                        <div className="text-center bg-teal-200 p-2 rounded">Parent A</div>
+                        <div className="text-center bg-teal-200 p-2 rounded">Parent A</div>
                       </div>
                     </div>
                     
@@ -105,7 +105,7 @@ export default function ChildCustodySchedules() {
                     </div>
                   </div>
 
-                  <div className="border border-gray-200 rounded-lg p-6">
+                  <div className="bg-white border border-stone-200 rounded-lg p-6 shadow-sm">
                     <h3 className="text-2xl font-semibold text-green-600 mb-4">2-2-5-5 Schedule</h3>
                     <p className="text-gray-700 mb-4">
                       <strong>How it works:</strong> Consistent weekday blocks with alternating weekends.
@@ -143,7 +143,7 @@ export default function ChildCustodySchedules() {
                     </div>
                   </div>
 
-                  <div className="border border-gray-200 rounded-lg p-6">
+                  <div className="bg-white border border-stone-200 rounded-lg p-6 shadow-sm">
                     <h3 className="text-2xl font-semibold text-purple-600 mb-4">Week-On / Week-Off</h3>
                     <p className="text-gray-700 mb-4">
                       <strong>How it works:</strong> Children alternate full weeks with each parent.
@@ -176,7 +176,7 @@ export default function ChildCustodySchedules() {
                     </div>
                   </div>
 
-                  <div className="border border-gray-200 rounded-lg p-6">
+                  <div className="bg-white border border-stone-200 rounded-lg p-6 shadow-sm">
                     <h3 className="text-2xl font-semibold text-orange-600 mb-4">3-4-4-3 Schedule</h3>
                     <p className="text-gray-700 mb-4">
                       <strong>How it works:</strong> Predictable weekly rhythm with longer blocks of time.
