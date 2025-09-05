@@ -65,7 +65,7 @@ export default async function StatePage({ params }: StatePageProps) {
     "@context": "https://schema.org",
     "@type": "Article",
     "headline": `Divorce Laws in ${stateName}`,
-    "description": `Learn how divorce works in ${stateName}, including custody, property division, and lawyer fees.`,
+    "description": `Complete guide to ${stateName} divorce laws including custody arrangements, property division rules, residency requirements, and typical attorney fees.`,
     "author": {
       "@type": "Organization",
       "name": "Smart Divorce Questions"

@@ -11,12 +11,12 @@ export function createMetadata({
   path?: string
   images?: string[]
 }): Metadata {
-  const url = `https://smartdivorcequestions.com${path}`
+  const url = `https://www.smartdivorcequestions.com${path}`
   
   return {
     title,
     description,
-    metadataBase: new URL('https://smartdivorcequestions.com'),
+    metadataBase: new URL('https://www.smartdivorcequestions.com'),
     alternates: {
       canonical: url,
     },

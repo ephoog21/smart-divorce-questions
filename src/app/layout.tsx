@@ -24,11 +24,11 @@ export const metadata: Metadata = {
   description: 'Expert answers to 50+ essential divorce questions about custody, finances, and property division. Free consultation guide for 2025.',
   keywords: ['divorce questions', 'what to ask divorce lawyer', 'divorce consultation questions', 'child custody questions', 'divorce lawyer questions', 'divorce process questions', 'divorce guide 2025'],
   authors: [{ name: 'Smart Divorce Questions' }],
-  metadataBase: new URL('https://smartdivorcequestions.com'),
+  metadataBase: new URL('https://www.smartdivorcequestions.com'),
   openGraph: {
     title: 'Smart Divorce Questions | Expert Guide 2025',
     description: 'Expert answers to 50+ essential divorce questions about custody, finances, and property division. Free consultation guide for 2025.',
-    url: 'https://smartdivorcequestions.com',
+    url: 'https://www.smartdivorcequestions.com',
     siteName: 'Smart Divorce Questions',
     locale: 'en_US',
     type: 'website',
@@ -59,7 +59,7 @@ export const metadata: Metadata = {
     },
   },
   alternates: {
-    canonical: 'https://smartdivorcequestions.com',
+    canonical: 'https://www.smartdivorcequestions.com',
   },
   verification: {
     google: 'your-google-verification-code',
