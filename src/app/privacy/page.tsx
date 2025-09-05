@@ -1,9 +1,11 @@
 import { Metadata } from 'next';
+import { createMetadata } from '@/lib/metadata';
 
-export const metadata: Metadata = {
+export const metadata: Metadata = createMetadata({
   title: 'Privacy Policy | Smart Divorce Questions',
   description: 'Privacy policy for Smart Divorce Questions. Learn how we collect, use, and protect your personal information.',
-};
+  path: '/privacy',
+});
 
 export default function PrivacyPage() {
   return (

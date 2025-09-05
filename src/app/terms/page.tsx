@@ -1,9 +1,11 @@
 import { Metadata } from 'next';
+import { createMetadata } from '@/lib/metadata';
 
-export const metadata: Metadata = {
+export const metadata: Metadata = createMetadata({
   title: 'Terms of Service | Smart Divorce Questions',
   description: 'Terms of service for Smart Divorce Questions. Read our terms and conditions for using our website and services.',
-};
+  path: '/terms',
+});
 
 export default function TermsPage() {
   return (

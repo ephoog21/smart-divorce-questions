@@ -1,10 +1,12 @@
 import { Metadata } from 'next';
 import Link from 'next/link';
+import { createMetadata } from '@/lib/metadata';
 
-export const metadata: Metadata = {
+export const metadata: Metadata = createMetadata({
   title: 'Divorce Laws by State | Complete US Guide 2025',
   description: 'Comprehensive guide to divorce laws in all 50 US states. Compare residency requirements, property division rules, custody laws, and filing procedures.',
-};
+  path: '/divorce-laws',
+});
 
 const states = [
   { name: 'Alabama', slug: 'alabama', abbr: 'AL' },

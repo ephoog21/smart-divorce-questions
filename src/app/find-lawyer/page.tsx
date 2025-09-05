@@ -1,11 +1,12 @@
 import { Metadata } from 'next';
 import LawyerMapSearch from '@/components/LawyerMapSearch';
+import { createMetadata } from '@/lib/metadata';
 
-export const metadata: Metadata = {
+export const metadata: Metadata = createMetadata({
   title: 'Find Divorce Lawyers Near Me | Smart Divorce Questions',
   description: 'Find experienced divorce lawyers in your area. Compare ratings, read reviews, and get free consultations from top-rated divorce attorneys near you.',
-  keywords: 'divorce lawyer near me, divorce attorney, family law attorney, divorce lawyer, find divorce lawyer',
-};
+  path: '/find-lawyer',
+});
 
 export default function FindLawyerPage() {
   return (
