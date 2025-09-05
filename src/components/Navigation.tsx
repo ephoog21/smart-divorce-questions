@@ -29,21 +29,15 @@ export default function Navigation() {
             href="/" 
             className="flex items-center space-x-3 group"
           >
-            <div className="w-10 h-6 relative">
+            <div className="relative w-48 h-12 sm:w-56 sm:h-14">
               <Image
-                src="/logo.svg"
+                src="/logo-new.png"
                 alt="Smart Divorce Questions Logo"
                 fill
                 className="object-contain group-hover:scale-105 transition-transform duration-300"
                 priority
               />
             </div>
-            <span className="font-serif text-xl font-bold text-navy-900 group-hover:text-teal-600 transition-colors duration-300 hidden sm:block">
-              Smart Divorce Questions
-            </span>
-            <span className="font-serif text-lg font-bold text-navy-900 group-hover:text-teal-600 transition-colors duration-300 sm:hidden">
-              SDQ
-            </span>
           </Link>
           
           <div className="hidden md:flex items-center space-x-8">
