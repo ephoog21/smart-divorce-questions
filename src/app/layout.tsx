@@ -19,23 +19,52 @@ const lora = Lora({
 })
 
 export const metadata: Metadata = {
-  title: 'Smart Divorce Questions | Your Guide to Navigating Divorce',
-  description: 'Get clear answers to common divorce questions — from custody schedules and finances to dividing property and hiring a lawyer.',
+  title: 'Essential Divorce Questions to Ask Your Lawyer | Smart Divorce Guide 2025',
+  description: 'Get expert answers to 50+ divorce questions about custody, finances, property division, and lawyer costs. Free divorce consultation guide with essential questions to ask your attorney.',
+  keywords: ['divorce questions', 'what to ask divorce lawyer', 'divorce consultation questions', 'child custody questions', 'divorce lawyer questions', 'divorce process questions', 'divorce guide 2025'],
+  authors: [{ name: 'Smart Divorce Questions' }],
   metadataBase: new URL('https://smartdivorcequestions.com'),
   openGraph: {
-    title: 'Smart Divorce Questions | Your Guide to Navigating Divorce',
-    description: 'Get clear answers to common divorce questions — from custody schedules and finances to dividing property and hiring a lawyer.',
+    title: 'Essential Divorce Questions to Ask Your Lawyer | Smart Divorce Guide 2025',
+    description: 'Get expert answers to 50+ divorce questions about custody, finances, property division, and lawyer costs. Free divorce consultation guide with essential questions to ask your attorney.',
     url: 'https://smartdivorcequestions.com',
     siteName: 'Smart Divorce Questions',
     locale: 'en_US',
     type: 'website',
+    images: [
+      {
+        url: '/og-image.jpg',
+        width: 1200,
+        height: 630,
+        alt: 'Smart Divorce Questions - Essential Divorce Guide',
+      },
+    ],
+  },
+  twitter: {
+    card: 'summary_large_image',
+    title: 'Essential Divorce Questions to Ask Your Lawyer | Smart Divorce Guide 2025',
+    description: 'Get expert answers to 50+ divorce questions about custody, finances, property division, and lawyer costs.',
+    images: ['/og-image.jpg'],
   },
   robots: {
     index: true,
     follow: true,
+    googleBot: {
+      index: true,
+      follow: true,
+      'max-video-preview': -1,
+      'max-image-preview': 'large',
+      'max-snippet': -1,
+    },
   },
   alternates: {
     canonical: 'https://smartdivorcequestions.com',
+  },
+  verification: {
+    google: 'your-google-verification-code',
+    other: {
+      'google-site-verification': ['your-google-verification-code'],
+    },
   },
 }
 
