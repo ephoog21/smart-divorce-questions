@@ -20,14 +20,14 @@ const lora = Lora({
 })
 
 export const metadata: Metadata = {
-  title: 'Essential Divorce Questions to Ask Your Lawyer | Smart Divorce Guide 2025',
-  description: 'Get expert answers to 50+ divorce questions about custody, finances, property division, and lawyer costs. Free divorce consultation guide with essential questions to ask your attorney.',
+  title: 'Smart Divorce Questions | Expert Guide 2025',
+  description: 'Expert answers to 50+ essential divorce questions about custody, finances, and property division. Free consultation guide for 2025.',
   keywords: ['divorce questions', 'what to ask divorce lawyer', 'divorce consultation questions', 'child custody questions', 'divorce lawyer questions', 'divorce process questions', 'divorce guide 2025'],
   authors: [{ name: 'Smart Divorce Questions' }],
   metadataBase: new URL('https://smartdivorcequestions.com'),
   openGraph: {
-    title: 'Essential Divorce Questions to Ask Your Lawyer | Smart Divorce Guide 2025',
-    description: 'Get expert answers to 50+ divorce questions about custody, finances, property division, and lawyer costs. Free divorce consultation guide with essential questions to ask your attorney.',
+    title: 'Smart Divorce Questions | Expert Guide 2025',
+    description: 'Expert answers to 50+ essential divorce questions about custody, finances, and property division. Free consultation guide for 2025.',
     url: 'https://smartdivorcequestions.com',
     siteName: 'Smart Divorce Questions',
     locale: 'en_US',
@@ -43,8 +43,8 @@ export const metadata: Metadata = {
   },
   twitter: {
     card: 'summary_large_image',
-    title: 'Essential Divorce Questions to Ask Your Lawyer | Smart Divorce Guide 2025',
-    description: 'Get expert answers to 50+ divorce questions about custody, finances, property division, and lawyer costs.',
+    title: 'Smart Divorce Questions | Expert Guide 2025',
+    description: 'Expert answers to 50+ essential divorce questions about custody, finances, and property division.',
     images: ['/logo.svg'],
   },
   robots: {

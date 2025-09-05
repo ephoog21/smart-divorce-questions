@@ -34,7 +34,7 @@ export async function generateMetadata({ params }: StatePageProps): Promise<Meta
   
   return createMetadata({
     title: `Divorce Laws in ${stateName} | Smart Divorce Questions`,
-    description: `Learn how divorce works in ${stateName}, including custody, property division, and lawyer fees.`,
+    description: `Complete guide to ${stateName} divorce laws including custody arrangements, property division rules, residency requirements, and typical attorney fees.`,
     path: `/divorce-laws/${state}`,
   })
 }

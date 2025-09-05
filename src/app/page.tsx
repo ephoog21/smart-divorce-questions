@@ -4,18 +4,18 @@ const structuredData = {
   "@context": "https://schema.org",
   "@type": "Organization",
   "name": "Smart Divorce Questions",
-  "url": "https://smartdivorcequestions.com",
-  "logo": "https://smartdivorcequestions.com/logo.svg",
+  "url": "https://www.smartdivorcequestions.com",
+  "logo": {
+    "@type": "ImageObject",
+    "url": "https://www.smartdivorcequestions.com/logo.svg",
+    "width": 240,
+    "height": 60
+  },
   "description": "Expert divorce guidance and essential questions to ask your lawyer about custody, finances, and legal processes.",
   "sameAs": [
     "https://www.facebook.com/smartdivorcequestions",
     "https://twitter.com/smartdivorceq"
-  ],
-  "publisher": {
-    "@type": "Organization",
-    "name": "Smart Divorce Questions",
-    "logo": "https://smartdivorcequestions.com/logo.svg"
-  }
+  ]
 }
 
 const faqStructuredData = {
@@ -240,6 +240,31 @@ export default function Home() {
                 <p className="text-sm text-slate-600 italic">
                   Last updated: January 2025 | All information reviewed by family law experts
                 </p>
+              </div>
+            </div>
+          </div>
+
+          {/* Call to Action for Lawyers */}
+          <div className="mt-16 bg-gradient-to-r from-teal-600 to-teal-700 rounded-xl p-8 text-white">
+            <div className="max-w-3xl mx-auto text-center">
+              <h3 className="text-2xl font-bold mb-4">Are You a Divorce Lawyer?</h3>
+              <p className="text-lg mb-6">
+                Join our exclusive directory and connect with clients actively seeking legal representation. 
+                Get premium placement and qualified leads.
+              </p>
+              <div className="flex gap-4 justify-center">
+                <Link 
+                  href="/lawyers/join" 
+                  className="inline-block bg-white text-teal-700 px-6 py-3 rounded-lg font-semibold hover:bg-gray-100 transition"
+                >
+                  Join Our Directory
+                </Link>
+                <Link 
+                  href="/find-lawyer" 
+                  className="inline-block border-2 border-white text-white px-6 py-3 rounded-lg font-semibold hover:bg-white/10 transition"
+                >
+                  View Directory
+                </Link>
               </div>
             </div>
           </div>

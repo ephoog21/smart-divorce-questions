@@ -5,7 +5,7 @@ import { createMetadata } from '@/lib/metadata'
 
 export const metadata: Metadata = createMetadata({
   title: 'Divorce FAQ | Smart Divorce Questions',
-  description: 'Get answers to common divorce questions on custody, finances, timelines, and lawyer costs.',
+  description: 'Get comprehensive answers to frequently asked divorce questions about custody arrangements, finances, legal timelines, and attorney costs.',
   path: '/faq',
 })
 

@@ -1,7 +1,7 @@
 import { MetadataRoute } from 'next'
 
 export default function sitemap(): MetadataRoute.Sitemap {
-  const baseUrl = 'https://smartdivorcequestions.com'
+  const baseUrl = 'https://www.smartdivorcequestions.com'
   
   const staticPages = [
     '',
@@ -12,6 +12,10 @@ export default function sitemap(): MetadataRoute.Sitemap {
     '/no-fault-divorce-explained',
     '/divorce-without-a-lawyer',
     '/faq',
+    '/privacy',
+    '/terms',
+    '/find-lawyer',
+    '/lawyers/join',
   ]
 
   const usStates = [
