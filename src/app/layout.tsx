@@ -1,5 +1,6 @@
 import type { Metadata } from 'next'
 import { Inter, Lora } from 'next/font/google'
+import Script from 'next/script'
 import './globals.css'
 import Navigation from '@/components/Navigation'
 import Footer from '@/components/Footer'
@@ -75,7 +76,29 @@ export default function RootLayout({
 }) {
   return (
     <html lang="en" className={`${inter.variable} ${lora.variable}`}>
+      <head>
+        {/* Google AdSense */}
+        <script 
+          async 
+          src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-2921065021940727"
+          crossOrigin="anonymous"
+        />
+      </head>
       <body className={`${inter.className} bg-stone-50 text-slate-900 antialiased`}>
+        {/* Google Analytics - Optimized with Next.js Script */}
+        <Script
+          src="https://www.googletagmanager.com/gtag/js?id=G-M31NMPRCNP"
+          strategy="afterInteractive"
+        />
+        <Script id="google-analytics" strategy="afterInteractive">
+          {`
+            window.dataLayer = window.dataLayer || [];
+            function gtag(){dataLayer.push(arguments);}
+            gtag('js', new Date());
+            gtag('config', 'G-M31NMPRCNP');
+          `}
+        </Script>
+        
         <Navigation />
         <main className="min-h-screen">
           {children}
