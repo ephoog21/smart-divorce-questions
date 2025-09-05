@@ -35,10 +35,12 @@ export default function LawyerMapSearch() {
   const mapRef = useRef<HTMLDivElement>(null);
   const mapInstanceRef = useRef<google.maps.Map | null>(null);
   const serviceRef = useRef<google.maps.places.PlacesService | null>(null);
+  const geocoderRef = useRef<google.maps.Geocoder | null>(null);
   const [lawyers, setLawyers] = useState<Lawyer[]>([]);
   const [userLocation, setUserLocation] = useState<{lat: number, lng: number} | null>(null);
   const [searchRadius, setSearchRadius] = useState(10000); // 10km default
   const [isLoading, setIsLoading] = useState(false);
+  const [locationInput, setLocationInput] = useState('');
   
   // These would come from your database
   const sponsoredListings: SponsoredListing[] = [
@@ -75,6 +77,7 @@ export default function LawyerMapSearch() {
     });
 
     serviceRef.current = new google.maps.places.PlacesService(mapInstanceRef.current);
+    geocoderRef.current = new google.maps.Geocoder();
     
     // Get user's location
     if (navigator.geolocation && !userLocation) {
@@ -280,6 +283,33 @@ export default function LawyerMapSearch() {
     console.log('Contact:', contact);
   };
 
+  const searchByLocation = useCallback(() => {
+    if (!geocoderRef.current || !locationInput.trim()) {
+      alert('Please enter a location to search');
+      return;
+    }
+
+    setIsLoading(true);
+    
+    geocoderRef.current.geocode({ address: locationInput }, (results, status) => {
+      if (status === google.maps.GeocoderStatus.OK && results && results[0]) {
+        const location = {
+          lat: results[0].geometry.location.lat(),
+          lng: results[0].geometry.location.lng()
+        };
+        
+        // Update map center and search
+        mapInstanceRef.current?.setCenter(location);
+        mapInstanceRef.current?.setZoom(12);
+        setUserLocation(location);
+        searchNearbyLawyers(location);
+      } else {
+        alert('Could not find that location. Please try a different search.');
+        setIsLoading(false);
+      }
+    });
+  }, [locationInput, searchNearbyLawyers]);
+
   // Make requestContact available globally for info window
   useEffect(() => {
     window.requestContact = requestContact;
@@ -294,25 +324,80 @@ export default function LawyerMapSearch() {
       
       <div className="w-full">
         {/* Search Controls */}
-        <div className="flex flex-wrap gap-4 mb-6">
-          <button 
-            onClick={() => searchNearbyLawyers(userLocation || {lat: 34.0522, lng: -118.2437})}
-            className="px-6 py-3 bg-blue-600 text-white rounded-lg hover:bg-blue-700 disabled:bg-gray-400 disabled:cursor-not-allowed transition-colors"
-            disabled={isLoading}
-          >
-            {isLoading ? 'Searching...' : 'Find Divorce Lawyers Near Me'}
-          </button>
+        <div className="space-y-4 mb-6">
+          {/* Location Search Bar */}
+          <div className="flex flex-wrap gap-4">
+            <div className="flex-1 min-w-[300px]">
+              <div className="flex gap-2">
+                <input
+                  type="text"
+                  placeholder="Enter city, state, or zip code (e.g., Los Angeles, CA)"
+                  value={locationInput}
+                  onChange={(e) => setLocationInput(e.target.value)}
+                  onKeyPress={(e) => {
+                    if (e.key === 'Enter') {
+                      searchByLocation();
+                    }
+                  }}
+                  className="flex-1 px-4 py-3 border border-gray-300 rounded-lg focus:outline-none focus:ring-2 focus:ring-blue-500"
+                />
+                <button
+                  onClick={searchByLocation}
+                  className="px-6 py-3 bg-teal-600 text-white rounded-lg hover:bg-teal-700 disabled:bg-gray-400 disabled:cursor-not-allowed transition-colors"
+                  disabled={isLoading}
+                >
+                  Search
+                </button>
+              </div>
+            </div>
+            
+            <select 
+              value={searchRadius} 
+              onChange={(e) => setSearchRadius(Number(e.target.value))}
+              className="px-4 py-3 border border-gray-300 rounded-lg focus:outline-none focus:ring-2 focus:ring-blue-500"
+            >
+              <option value={5000}>5 km</option>
+              <option value={10000}>10 km</option>
+              <option value={20000}>20 km</option>
+              <option value={50000}>50 km</option>
+            </select>
+          </div>
           
-          <select 
-            value={searchRadius} 
-            onChange={(e) => setSearchRadius(Number(e.target.value))}
-            className="px-4 py-3 border border-gray-300 rounded-lg focus:outline-none focus:ring-2 focus:ring-blue-500"
-          >
-            <option value={5000}>5 km</option>
-            <option value={10000}>10 km</option>
-            <option value={20000}>20 km</option>
-            <option value={50000}>50 km</option>
-          </select>
+          {/* Current Location Button */}
+          <div className="flex items-center gap-4">
+            <button 
+              onClick={() => {
+                if (navigator.geolocation) {
+                  navigator.geolocation.getCurrentPosition((position) => {
+                    const loc = {
+                      lat: position.coords.latitude,
+                      lng: position.coords.longitude
+                    };
+                    setUserLocation(loc);
+                    mapInstanceRef.current?.setCenter(loc);
+                    searchNearbyLawyers(loc);
+                    setLocationInput('Current Location');
+                  }, () => {
+                    alert('Unable to get your location. Please enter a location manually.');
+                  });
+                } else {
+                  alert('Geolocation is not supported by your browser.');
+                }
+              }}
+              className="px-6 py-3 bg-blue-600 text-white rounded-lg hover:bg-blue-700 disabled:bg-gray-400 disabled:cursor-not-allowed transition-colors flex items-center gap-2"
+              disabled={isLoading}
+            >
+              <svg className="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M17.657 16.657L13.414 20.9a1.998 1.998 0 01-2.827 0l-4.244-4.243a8 8 0 1111.314 0z" />
+                <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M15 11a3 3 0 11-6 0 3 3 0 016 0z" />
+              </svg>
+              {isLoading ? 'Searching...' : 'Use My Current Location'}
+            </button>
+            
+            <span className="text-gray-500 text-sm">
+              or search by entering a location above
+            </span>
+          </div>
         </div>
 
         {/* Map Container */}
