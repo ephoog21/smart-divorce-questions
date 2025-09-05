@@ -1,7 +1,9 @@
 import Link from 'next/link';
+import Script from 'next/script';
 
 export default function JoinSuccessPage() {
   return (
+    <>
     <div className="min-h-screen bg-gradient-to-br from-teal-50 to-blue-50 flex items-center justify-center px-4">
       <div className="max-w-2xl mx-auto text-center">
         {/* Success Icon */}
@@ -109,5 +111,21 @@ export default function JoinSuccessPage() {
         </div>
       </div>
     </div>
+    
+    {/* Google Conversion Tracking - Submit lead form */}
+    <Script
+      id="google-conversion-tracking"
+      strategy="afterInteractive"
+      dangerouslySetInnerHTML={{
+        __html: `
+          if (typeof gtag !== 'undefined') {
+            gtag('event', 'conversion', {
+              'send_to': 'AW-17424929826/PBbgCJOC3v0aEKKo7fRA'
+            });
+          }
+        `,
+      }}
+    />
+    </>
   );
 }
