@@ -17,6 +17,8 @@ export default function Navigation() {
     { href: '/dividing-assets-in-divorce', label: 'Assets' },
     { href: '/faq', label: 'FAQ' },
   ]
+  
+  const findLawyerLink = { href: '/find-lawyer', label: 'Find Lawyers' }
 
   return (
     <nav className="bg-white/95 backdrop-blur-sm border-b border-stone-200 sticky top-0 z-50">
@@ -54,6 +56,14 @@ export default function Navigation() {
                 <span className="absolute inset-x-0 bottom-0 h-0.5 bg-teal-600 transform scale-x-0 group-hover:scale-x-100 transition-transform duration-300"></span>
               </Link>
             ))}
+            
+            {/* Find Lawyers button with special styling */}
+            <Link 
+              href={findLawyerLink.href}
+              className="ml-4 px-5 py-2.5 bg-gradient-to-r from-teal-600 to-teal-700 text-white font-semibold rounded-full hover:from-teal-700 hover:to-teal-800 transform hover:scale-105 transition-all duration-300 shadow-md hover:shadow-lg"
+            >
+              {findLawyerLink.label}
+            </Link>
           </div>
 
           <div className="md:hidden">
@@ -89,6 +99,15 @@ export default function Navigation() {
                   {label}
                 </Link>
               ))}
+              
+              {/* Find Lawyers button for mobile */}
+              <Link 
+                href={findLawyerLink.href}
+                className="mx-2 px-5 py-3 bg-gradient-to-r from-teal-600 to-teal-700 text-white text-center font-semibold rounded-full hover:from-teal-700 hover:to-teal-800 transition-all duration-300 shadow-md"
+                onClick={() => setIsMenuOpen(false)}
+              >
+                {findLawyerLink.label}
+              </Link>
             </div>
           </div>
         )}
