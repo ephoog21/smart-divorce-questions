@@ -24,12 +24,12 @@ export default function Navigation() {
   return (
     <nav className="bg-white/95 backdrop-blur-sm border-b border-stone-200 sticky top-0 z-50">
       <div className="container mx-auto px-4 sm:px-6">
-        <div className="flex justify-between items-center h-20">
+        <div className="flex justify-between items-center h-24 sm:h-28">
           <Link 
             href="/" 
             className="flex items-center space-x-3 group"
           >
-            <div className="relative w-64 h-16 sm:w-80 sm:h-16 lg:w-96 lg:h-16">
+            <div className="relative w-72 h-20 sm:w-96 sm:h-24 lg:w-[28rem] lg:h-24">
               <Image
                 src="/logo-horizontal.png"
                 alt="Smart Divorce Questions Logo"
