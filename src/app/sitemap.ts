@@ -15,6 +15,8 @@ export default function sitemap(): MetadataRoute.Sitemap {
     '/faq',
     '/privacy',
     '/terms',
+    '/legal-disclaimer',
+    '/advice-disclaimer',
     '/find-lawyer',
     '/lawyers/join',
   ]

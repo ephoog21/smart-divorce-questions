@@ -278,6 +278,15 @@ export default function DivorceWithoutALawyer() {
                   <li>Stay organized with a filing system</li>
                 </ul>
               </div>
+
+              <div className="mt-16 pt-8 border-t border-gray-200">
+                <p className="text-xs text-gray-500 text-center">
+                  <strong>Disclaimer:</strong> This information is for educational purposes only and does not constitute legal advice. 
+                  Self-representation carries risks. Please consider consulting with a qualified attorney for advice specific to your circumstances. 
+                  See our <a href="/legal-disclaimer" className="underline hover:text-gray-700">Legal Disclaimer</a> and 
+                  <a href="/advice-disclaimer" className="underline hover:text-gray-700 ml-1">Advice Disclaimer</a> for more information.
+                </p>
+              </div>
             </div>
           </div>
         </div>

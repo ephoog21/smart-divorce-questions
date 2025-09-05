@@ -206,6 +206,15 @@ export default function HowMuchDoesDivorceLawyerCost() {
                   <li>Set clear boundaries on what requires lawyer involvement</li>
                 </ul>
               </div>
+
+              <div className="mt-16 pt-8 border-t border-gray-200">
+                <p className="text-xs text-gray-500 text-center">
+                  <strong>Disclaimer:</strong> This information is for educational purposes only. Costs vary significantly based on location, case complexity, and individual attorney rates. 
+                  Please consult with attorneys directly for specific pricing. 
+                  See our <a href="/legal-disclaimer" className="underline hover:text-gray-700">Legal Disclaimer</a> and 
+                  <a href="/advice-disclaimer" className="underline hover:text-gray-700 ml-1">Advice Disclaimer</a> for more information.
+                </p>
+              </div>
             </div>
           </div>
         </div>

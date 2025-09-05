@@ -93,13 +93,21 @@ export default function Footer() {
           <p className="text-slate-400 text-sm mb-4">
             &copy; 2024 Smart Divorce Questions. All rights reserved.
           </p>
-          <div className="flex justify-center space-x-6 text-sm">
+          <div className="flex justify-center flex-wrap gap-x-6 gap-y-2 text-sm">
             <Link href="/privacy" className="text-slate-400 hover:text-teal-400 transition-colors">
               Privacy Policy
             </Link>
             <span className="text-slate-600">|</span>
             <Link href="/terms" className="text-slate-400 hover:text-teal-400 transition-colors">
               Terms of Service
+            </Link>
+            <span className="text-slate-600">|</span>
+            <Link href="/legal-disclaimer" className="text-slate-400 hover:text-teal-400 transition-colors">
+              Legal Disclaimer
+            </Link>
+            <span className="text-slate-600">|</span>
+            <Link href="/advice-disclaimer" className="text-slate-400 hover:text-teal-400 transition-colors">
+              Advice Disclaimer
             </Link>
           </div>
         </div>
