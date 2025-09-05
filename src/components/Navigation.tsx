@@ -29,12 +29,12 @@ export default function Navigation() {
             href="/" 
             className="flex items-center space-x-3 group"
           >
-            <div className="relative w-48 h-12 sm:w-56 sm:h-14">
+            <div className="relative w-64 h-16 sm:w-80 sm:h-16 lg:w-96 lg:h-16">
               <Image
-                src="/logo-new.png"
+                src="/logo-horizontal.png"
                 alt="Smart Divorce Questions Logo"
                 fill
-                className="object-contain group-hover:scale-105 transition-transform duration-300"
+                className="object-contain object-left group-hover:scale-105 transition-transform duration-300"
                 priority
               />
             </div>
