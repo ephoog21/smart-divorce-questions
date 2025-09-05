@@ -6,10 +6,11 @@ export async function POST(request: NextRequest) {
     const formData = await request.json();
     
     // Create email transporter using Gmail
+    // Note: EMAIL_USER should be the actual Gmail account, not the alias
     const transporter = nodemailer.createTransport({
       service: 'gmail',
       auth: {
-        user: process.env.EMAIL_USER || 'support@smartdivorcequestions.com',
+        user: process.env.EMAIL_USER || 'ed@smartdivorcequestions.com',
         pass: process.env.EMAIL_PASSWORD || ''
       }
     });
