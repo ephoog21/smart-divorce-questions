@@ -89,6 +89,13 @@ export default function RootLayout({
           src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-2921065021940727"
           crossOrigin="anonymous"
         />
+        
+        {/* Ahrefs Analytics */}
+        <script 
+          src="https://analytics.ahrefs.com/analytics.js" 
+          data-key="hTtahZz2HaC7uzJwI1aayA" 
+          async
+        />
       </head>
       <body className={`${inter.className} bg-stone-50 text-slate-900 antialiased`}>
         {/* Google Analytics - Optimized with Next.js Script */}
