@@ -1,0 +1,33 @@
+<svg width="32" height="32" viewBox="0 0 32 32" xmlns="http://www.w3.org/2000/svg">
+  <defs>
+    <style>
+      .icon-primary { fill: #0f172a; }
+      .icon-accent { fill: #0f766e; }
+    </style>
+  </defs>
+  
+  <!-- Simplified scales icon for favicon -->
+  <!-- Base -->
+  <rect x="14" y="26" width="4" height="4" class="icon-primary"/>
+  <rect x="10" y="29" width="12" height="2" class="icon-primary"/>
+  
+  <!-- Main pole -->
+  <rect x="15" y="6" width="2" height="21" class="icon-primary"/>
+  
+  <!-- Horizontal beam -->
+  <rect x="6" y="6" width="20" height="2" class="icon-accent"/>
+  
+  <!-- Left scale -->
+  <circle cx="10" cy="12" r="6" fill="none" stroke="#0f766e" stroke-width="2"/>
+  <line x1="10" y1="8" x2="10" y2="10" stroke="#0f766e" stroke-width="2"/>
+  
+  <!-- Right scale -->
+  <circle cx="22" cy="12" r="6" fill="none" stroke="#0f766e" stroke-width="2"/>
+  <line x1="22" y1="8" x2="22" y2="10" stroke="#0f766e" stroke-width="2"/>
+  
+  <!-- Question mark in left scale -->
+  <text x="10" y="15" text-anchor="middle" class="icon-primary" style="font-size: 8px; font-weight: bold;">?</text>
+  
+  <!-- Checkmark in right scale -->
+  <path d="M 19 11 L 21 13 L 25 9" fill="none" stroke="#0f172a" stroke-width="2" stroke-linecap="round"/>
+</svg>

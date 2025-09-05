@@ -34,9 +34,9 @@ export const metadata: Metadata = {
     type: 'website',
     images: [
       {
-        url: '/og-image.jpg',
-        width: 1200,
-        height: 630,
+        url: '/logo.svg',
+        width: 240,
+        height: 60,
         alt: 'Smart Divorce Questions - Essential Divorce Guide',
       },
     ],
@@ -45,7 +45,7 @@ export const metadata: Metadata = {
     card: 'summary_large_image',
     title: 'Essential Divorce Questions to Ask Your Lawyer | Smart Divorce Guide 2025',
     description: 'Get expert answers to 50+ divorce questions about custody, finances, property division, and lawyer costs.',
-    images: ['/og-image.jpg'],
+    images: ['/logo.svg'],
   },
   robots: {
     index: true,
@@ -77,6 +77,12 @@ export default function RootLayout({
   return (
     <html lang="en" className={`${inter.variable} ${lora.variable}`}>
       <head>
+        {/* Favicon and App Icons */}
+        <link rel="icon" href="/favicon.svg" type="image/svg+xml" />
+        <link rel="icon" href="/favicon.ico" type="image/x-icon" />
+        <link rel="apple-touch-icon" href="/apple-touch-icon.png" />
+        <link rel="manifest" href="/manifest.json" />
+        
         {/* Google AdSense */}
         <script 
           async 

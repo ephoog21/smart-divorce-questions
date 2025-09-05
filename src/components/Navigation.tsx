@@ -1,6 +1,7 @@
 'use client'
 
 import Link from 'next/link'
+import Image from 'next/image'
 import { useState } from 'react'
 
 export default function Navigation() {
@@ -23,9 +24,23 @@ export default function Navigation() {
         <div className="flex justify-between items-center h-20">
           <Link 
             href="/" 
-            className="font-serif text-2xl font-bold text-navy-900 hover:text-teal-600 transition-colors duration-300"
+            className="flex items-center space-x-3 group"
           >
-            Smart Divorce Questions
+            <div className="w-10 h-6 relative">
+              <Image
+                src="/logo.svg"
+                alt="Smart Divorce Questions Logo"
+                fill
+                className="object-contain group-hover:scale-105 transition-transform duration-300"
+                priority
+              />
+            </div>
+            <span className="font-serif text-xl font-bold text-navy-900 group-hover:text-teal-600 transition-colors duration-300 hidden sm:block">
+              Smart Divorce Questions
+            </span>
+            <span className="font-serif text-lg font-bold text-navy-900 group-hover:text-teal-600 transition-colors duration-300 sm:hidden">
+              SDQ
+            </span>
           </Link>
           
           <div className="hidden md:flex items-center space-x-8">

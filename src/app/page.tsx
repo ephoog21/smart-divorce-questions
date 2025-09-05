@@ -5,7 +5,7 @@ const structuredData = {
   "@type": "Organization",
   "name": "Smart Divorce Questions",
   "url": "https://smartdivorcequestions.com",
-  "logo": "https://smartdivorcequestions.com/logo.png",
+  "logo": "https://smartdivorcequestions.com/logo.svg",
   "description": "Expert divorce guidance and essential questions to ask your lawyer about custody, finances, and legal processes.",
   "sameAs": [
     "https://www.facebook.com/smartdivorcequestions",
@@ -13,7 +13,8 @@ const structuredData = {
   ],
   "publisher": {
     "@type": "Organization",
-    "name": "Smart Divorce Questions"
+    "name": "Smart Divorce Questions",
+    "logo": "https://smartdivorcequestions.com/logo.svg"
   }
 }
 
