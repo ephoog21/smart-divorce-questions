@@ -11,6 +11,7 @@ export default function sitemap(): MetadataRoute.Sitemap {
     '/dividing-assets-in-divorce',
     '/no-fault-divorce-explained',
     '/divorce-without-a-lawyer',
+    '/divorce-laws',
     '/faq',
     '/privacy',
     '/terms',

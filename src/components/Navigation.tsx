@@ -13,6 +13,7 @@ export default function Navigation() {
 
   const navigation = [
     { href: '/what-to-ask-your-divorce-lawyer', label: 'Lawyer Questions' },
+    { href: '/divorce-laws', label: 'State Laws' },
     { href: '/child-custody-schedules', label: 'Custody' },
     { href: '/dividing-assets-in-divorce', label: 'Assets' },
     { href: '/faq', label: 'FAQ' },

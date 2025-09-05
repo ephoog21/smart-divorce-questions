@@ -208,6 +208,51 @@ export default function Home() {
             </Link>
           </div>
 
+          {/* State Laws Section */}
+          <div className="mt-20 max-w-6xl mx-auto">
+            <div className="text-center mb-10">
+              <h2 className="font-serif text-3xl font-bold text-navy-900 mb-4">
+                Divorce Laws by State
+              </h2>
+              <p className="text-lg text-gray-600">
+                Each state has unique divorce requirements. Select your state for specific information.
+              </p>
+            </div>
+            
+            <div className="grid grid-cols-2 sm:grid-cols-3 md:grid-cols-4 lg:grid-cols-6 gap-4 mb-8">
+              <Link href="/divorce-laws/california" className="bg-white hover:bg-teal-50 border border-gray-200 hover:border-teal-500 rounded-lg p-3 text-center transition-all">
+                <span className="font-semibold text-gray-700">California</span>
+              </Link>
+              <Link href="/divorce-laws/texas" className="bg-white hover:bg-teal-50 border border-gray-200 hover:border-teal-500 rounded-lg p-3 text-center transition-all">
+                <span className="font-semibold text-gray-700">Texas</span>
+              </Link>
+              <Link href="/divorce-laws/florida" className="bg-white hover:bg-teal-50 border border-gray-200 hover:border-teal-500 rounded-lg p-3 text-center transition-all">
+                <span className="font-semibold text-gray-700">Florida</span>
+              </Link>
+              <Link href="/divorce-laws/new-york" className="bg-white hover:bg-teal-50 border border-gray-200 hover:border-teal-500 rounded-lg p-3 text-center transition-all">
+                <span className="font-semibold text-gray-700">New York</span>
+              </Link>
+              <Link href="/divorce-laws/pennsylvania" className="bg-white hover:bg-teal-50 border border-gray-200 hover:border-teal-500 rounded-lg p-3 text-center transition-all">
+                <span className="font-semibold text-gray-700">Pennsylvania</span>
+              </Link>
+              <Link href="/divorce-laws/illinois" className="bg-white hover:bg-teal-50 border border-gray-200 hover:border-teal-500 rounded-lg p-3 text-center transition-all">
+                <span className="font-semibold text-gray-700">Illinois</span>
+              </Link>
+            </div>
+            
+            <div className="text-center">
+              <Link 
+                href="/divorce-laws" 
+                className="inline-flex items-center text-teal-600 hover:text-teal-700 font-semibold"
+              >
+                View All 50 States 
+                <svg className="w-5 h-5 ml-2" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                  <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M9 5l7 7-7 7" />
+                </svg>
+              </Link>
+            </div>
+          </div>
+
           {/* SEO Content Section */}
           <div className="mt-20 max-w-4xl mx-auto">
             <div className="bg-white border border-stone-200 rounded-xl p-8 shadow-sm">
