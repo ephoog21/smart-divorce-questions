@@ -5,13 +5,17 @@ export async function POST(request: NextRequest) {
   try {
     const formData = await request.json();
     
-    // Create email transporter using Gmail
-    // Note: EMAIL_USER should be the actual Gmail account, not the alias
+    // Create email transporter using GoDaddy SMTP
     const transporter = nodemailer.createTransport({
-      service: 'gmail',
+      host: 'smtpout.secureserver.net',
+      port: 465,
+      secure: true, // true for 465, false for 587
       auth: {
-        user: process.env.EMAIL_USER || 'ed@smartdivorcequestions.com',
+        user: process.env.EMAIL_USER || 'support@smartdivorcequestions.com',
         pass: process.env.EMAIL_PASSWORD || ''
+      },
+      tls: {
+        rejectUnauthorized: false
       }
     });
 
