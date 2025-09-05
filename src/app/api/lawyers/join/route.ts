@@ -6,12 +6,11 @@ export async function POST(request: NextRequest) {
     const formData = await request.json();
     
     // Create email transporter using Gmail
-    // In production, you should use environment variables for credentials
     const transporter = nodemailer.createTransport({
       service: 'gmail',
       auth: {
-        user: process.env.EMAIL_USER || 'your-email@gmail.com',
-        pass: process.env.EMAIL_PASSWORD || 'your-app-password'
+        user: process.env.EMAIL_USER || 'support@smartdivorcequestions.com',
+        pass: process.env.EMAIL_PASSWORD || ''
       }
     });
 
@@ -122,7 +121,7 @@ export async function POST(request: NextRequest) {
 
     // Send email to admin (you)
     await transporter.sendMail({
-      from: '"Smart Divorce Questions" <noreply@smartdivorcequestions.com>',
+      from: '"Smart Divorce Questions" <support@smartdivorcequestions.com>',
       to: 'ehoogasian@gmail.com',
       subject: `New Lawyer Application - ${formData.firstName} ${formData.lastName} (${formData.firmName})`,
       html: adminEmailHtml
@@ -130,7 +129,7 @@ export async function POST(request: NextRequest) {
 
     // Send confirmation email to the lawyer
     await transporter.sendMail({
-      from: '"Smart Divorce Questions" <noreply@smartdivorcequestions.com>',
+      from: '"Smart Divorce Questions" <support@smartdivorcequestions.com>',
       to: formData.email,
       subject: 'Application Received - Smart Divorce Questions Lawyer Directory',
       html: confirmationEmailHtml
