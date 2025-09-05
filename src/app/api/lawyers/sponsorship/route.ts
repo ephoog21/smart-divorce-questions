@@ -1,7 +1,7 @@
 import { NextRequest, NextResponse } from 'next/server';
 
 // Sponsorship tiers and pricing
-export const SPONSORSHIP_TIERS = {
+const SPONSORSHIP_TIERS = {
   basic: {
     price: 99, // per month
     features: [

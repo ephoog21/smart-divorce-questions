@@ -241,7 +241,7 @@ export default function LawyerMapSearch() {
     }
   };
 
-  const requestContact = async (placeId: string) => {
+  const requestContact = useCallback(async (placeId: string) => {
     // Get detailed info only when user requests it
     if (!serviceRef.current) return;
     
@@ -264,7 +264,7 @@ export default function LawyerMapSearch() {
         });
       }
     });
-  };
+  }, []);
 
   const trackInteraction = async (placeId: string, action: string) => {
     // Track user interactions for analytics
